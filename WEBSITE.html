@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My website</title>
+    <style>
+       body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-size: cover;
+            height: 150vh;
+            background-position: center;
+            overflow: hidden;
+            background-color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F4F4F4;
+
+        }
+
+        .open-modal {
+            padding: 5px 10px;
+            background: #007BFF;
+            color: white;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            display: inine-block;
+            text-decoration: none;
+        }
+
+        .open-modal-hover {
+            background-color: #0056b3;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-toggle {
+            display: none;
+        }
+
+        .modal-toggle:checked+.modal {
+            display: block;
+        }
+
+        .modal-content {
+            background-color: #766975;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 300px;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: black;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button[type="submit"] {
+            background-color: #28a745;
+            border: none;
+            padding: 10px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #218838;
+        }
+        .open-modala {
+            padding: 5px 10px;
+            background: #007BFF;
+            color: white;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            display: inine-block;
+            text-decoration: none;
+        }
+
+        .open-modal-hover {
+            background-color: #0056b3;
+        }
+
+        .modala {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-togglea {
+            display: none;
+        }
+
+        .modal-togglea:checked+.modala {
+            display: block;
+        }
+
+        .modala-content {
+            background-color: #766975;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 300px;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .closea {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .closea:hover {
+            color: black;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button[type="submit"] {
+            background-color: #28a745;
+            border: none;
+            padding: 10px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        .header {
+            color: #070707;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .header img{
+            width: 130px;
+            margin: 0;
+        }
+    
+
+        .nav {
+            display: flex;
+            justify-content: left;
+            background-color: #766975;
+            
+        }
+
+        .nav a {
+            color:#ffffff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .nav a:hover {
+            background-color: #3e343a;
+        }
+
+        .main {
+            color: #f8ba5e;
+            padding: 10px;
+            text-align: center;
+        }
+        
+
+           .content{
+            border:1px;
+           }
+
+
+
+
+    #outerbox{
+        
+        overflow:hidden;
+        position:relative;
+        border:1px solid #cd8cbe;
+        background-color: #cd8cbe;
+        border-width:500px;
+        border-top:1px;
+        border-bottom:1px;
+        
+    }
+    #sliderbox{
+        position:relative;
+        display:flex;
+        size:50px;
+        animation-name:slider;
+        animation-duration:40s;
+        animation-iteration-count:infinite;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    #sliderbox img{
+        float:left;
+        height:480px;
+        width:450px;
+
+    }
+   
+
+    
+
+
+    @keyframes slider{
+        0% {
+            left:0px;
+           
+        }
+        10%{
+            left:0px;
+           
+        }
+        12%{
+            left:-1000px;   
+            
+        }  
+        22%{
+            left:-1000px;
+        }
+        25%{
+            left:-2000px;
+        }
+        35%{
+            left:-2000px;
+        }
+        37%{
+            left:-3000px;
+        }
+        40%{
+            left:-3000px;
+        }
+        42%{
+            left:-4000px;
+        }
+        45%{
+            left:-4000px;
+        }
+        50%{
+            left:-5000px;
+        }
+        55%{
+            left:-5000px;
+        }
+        60%{
+            left:-6000px;  
+        }
+        62%{
+            left:-6000px;
+        }
+        65%{
+            left:-7000px;
+        }
+        72%{
+            left:-7000px;
+        }
+        75%{
+            left:-8000px;
+        }
+        85%{
+            left:-8000px;
+        }
+        87%{
+            left:-9000px;
+        }
+        97%{
+            left:-9000px;
+        }
+        100%{
+            left:-10000px;
+        }
+    }
+
+    .slide1{
+        margin-left:40px;
+        margin-right:450px;
+    }
+    .slide2{
+        margin-left:90px;
+        margin-right:450px;
+    }
+    .slide3{
+        margin-left:100px;
+        margin-right:400px;
+    }
+    .slide4{
+        margin-left:150px;
+        margin-right:400px;
+    }
+    .slide5{
+        margin-left:150px;
+        margin-right:400px;
+    }
+    .slide6{
+        margin-left:150px;
+        margin-right:400px;
+    }
+    .slide6{
+        margin-left:150px;
+        margin-right:450px;
+    }
+    .slide7{
+        margin-left:110px;
+        margin-right:450px;
+    }
+    .slide8{
+        margin-left:100px;
+        margin-right:450px;
+    }
+    .slide9{
+        margin-left:80px;
+        margin-right:450px;
+    }
+    .slide10{
+        margin-left:80px;
+        margin-right:450px;
+    }
+    
+        .footer {
+            background-color: #766975;
+            color: #ffffff;
+            text-align: center;
+            padding: 3px;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .content {
+            width: 100%;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="LOGO.png">
+            <h1>EABAGS</h1>
+        </div>
+        <div class="nav">
+            <a href="HOME.html">Home</a>
+            <a href="PRODUCTS.html">Products</a>
+            <a href="#shop now">Shop now</a>
+            <a href="#about">About</a>
+            <label for="modal-toggle" class="open-modal">Login</label>
+            <input type="checkbox" id="modal-toggle" class="modal-toggle">
+
+            <div class="modal">
+                <div class="modal-content">
+                    <label for="modal-toggle" class="close">&times;</label>
+                    <h2>Login</h2>
+                    <form>
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                        <label for="password">Password:</label>
+                        <input type="text" id="password" name="password" required>
+                        <button type="submit">Log-in</button>
+
+                        <label for="modal-togglea" class="open-modala">Register here</label>
+                        <input type="checkbox" id="modal-togglea" class="modal-togglea">
+
+                        <div class="modala">
+                            <div class="modala-content">
+                                <label for="modal-togglea" class="closea">&times;</label>
+                                <h2>Registration</h2>
+                                <form>
+                                    <label for="username">Email Address</label><br>
+                                    <input type="text" id="emailaddress" name="address" required><br>
+                                    <label for="password">Name</label><br>
+                                    <input type="text" id="name" name="name" required><br>
+                                    <label for="password">Last Name</label><br>
+                                    <input type="text" id="lastname" name="lastname" required><br>
+                                    <label for="password">Birthdate</label><br>
+                                    <input type="date" id="birthdate" name="birthdate" required><br>
+                                    <label for="password">Username</label><br>
+                                    <input type="text" id="username" name="username" required><br>
+                                    <label for="password">Password</label><br>
+                                    <input type="text" id="password" name="password" required><br>
+
+                                    <button type="submit">Log-in</button>
+                                </form>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+                                    
+                                        
+                                    
+
+
+
+
+        </div>
+        
+            <div id="outerbox">
+
+                <div id="sliderbox">
+
+                   <div class="slide1">
+                   <a href="#"><img id="image1" src="Untitled_Project__1_-removebg-preview.png"></a>
+               </div>
+               <div class="slide2">
+                   <a href="#"><img id="image2" src="Untitled_Project__25_-removebg-preview.png"></a>
+               </div>
+               <div class="slide3">
+                   <a href="#"><img id="image3"src="Untitled_Project__12_-removebg-preview.png" ></a>
+               </div>
+               <div class="slide4">
+                   <a href="#"><img id="image4"src="Untitled_Project__4_-removebg-preview.png" ></a>
+               </div>
+               <div class="slide5">
+                   <a href="#"><img id="image5"src="Untitled_Project__30_-removebg-preview.png" ></a>
+               </div>
+               <div class="slide6">
+                   <a href="#"><img id="image6"src="Untitled_Project__17_-removebg-preview.png" ></a>
+               </div>
+               <div class="slide7">
+                   <a href="#"><img id="image7"src="Untitled_Project__9_-removebg-preview.png" ></a>
+               </div>
+               <div class="slide8">
+                   <a href="#"><img id ="image8"src="Untitled_Project__23_-removebg-preview.png" ></a>
+               </div>
+               <div class="slide9">
+                   <a href="#"><img id="image9" src="Untitled_Project__15_-removebg-preview.png" ></a>
+               </div>
+               <div class="slide10">
+                   <a href="#"><img id="image10"src="Untitled_Project__6_-removebg-preview.png" ></a>
+               </div>
+
+                </div>
+
+           </div>
+
+<div class="moreContent">
+    
+
+</div>
+        <div class="footer">
+            <p>© 2024 EABAGS. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+
+</html>

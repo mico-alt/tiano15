@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.header{
+    background-color: bisque;
+    padding: 20px;
+    text-align: center;
+}
+.topnav{
+    overflow: hidden;
+    background-color: rgb(255, 161, 127);
+    
+}
+.topnav a {
+float: left;
+display: block;
+color: black;
+text-align: center;
+padding: 15px 16px;
+text-decoration: none;
+}
+.topnav a:hover{
+    background-color: brown;
+    color: black;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+.page title{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: blueviolet;
+    color: azure;
+    text-align: center;
+    padding: 20px;
+
+}
+.menu{
+    background-color: crimson;
+    color: brown;
+    text-align: center;
+    padding: 20px;
+
+}
+.menu ul{
+    list-style: none;
+
+}
+.menu li{
+    display: inline;
+    margin: 0 15px;
+
+}
+.body-content{
+    flex-grow: 1;
+    padding: 180px;
+    background-color: aquamarine;
+
+}
+.footer{
+    background-color: rgb(113, 71, 6);
+    text-align: center;
+    padding: 10px;
+}

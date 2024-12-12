@@ -1,0 +1,427 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My website</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            overflow:hidden;
+        }
+
+
+        .header {
+            background-color:  #e6cdb7;
+            color: black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .nav { 
+            display: flex;
+            justify-content: left;
+            background-color: rgb(234, 215, 184);
+        }
+
+        .nav a {
+            color: black;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .nav a:hover {
+            background-color: #555;
+        }
+
+    
+           
+
+    
+
+    
+
+    #outerbox{
+        
+        overflow:hidden;
+       
+        position:relative;
+    
+        border:1px solid  #b49377;
+        background-color: #cea27b;
+        border-width:500px;
+       border-top:1px;
+       border-bottom:1px;
+
+
+       
+    }
+    #sliderbox{
+        position:relative;
+        display:flex;
+        size:40px;
+        animation-name:slider;
+        animation-duration:40s;
+        animation-iteration-count:infinite;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    
+        
+      
+        
+    }
+    #sliderbox img{
+        float:left;
+        height:520px;
+        width:450px;
+   
+    }
+   
+
+
+    @keyframes slider{
+        0% {
+            left:0px;
+           
+        }
+        10%{
+            left:0px;
+           
+        }
+        12%{
+            left:-1000px;   
+            
+        }  
+        22%{
+            left:-1000px;
+        }
+        25%{
+            left:-2000px;
+        }
+        35%{
+            left:-2000px;
+        }
+        37%{
+            left:-3000px;
+        }
+        40%{
+            left:-3000px;
+        }
+        42%{
+            left:-4000px;
+        }
+        45%{
+            left:-4000px;
+        }
+        50%{
+            left:-5000px;
+        }
+        55%{
+            left:-5000px;
+        }
+        60%{
+            left:-6000px;  
+        }
+        62%{
+            left:-6000px;
+        }
+        65%{
+            left:-7000px;
+        }
+        72%{
+            left:-7000px;
+        }
+        75%{
+            left:-8000px;
+        }
+        85%{
+            left:-8000px;
+        }
+        87%{
+            left:-9000px;
+        }
+        97%{
+            left:-9000px;
+        }
+        100%{
+            left:-10000px;
+        }
+    }
+
+    .slide1{
+        margin-left:40px;
+        margin-right:450px;
+    }
+    .slide2{
+        margin-left:120px;
+        margin-right:450px;
+    }
+    .slide3{
+        margin-left:90px;
+        margin-right:400px;
+    }
+    .slide4{
+        margin-left:150px;
+        margin-right:400px;
+    }
+    .slide5{
+        margin-left:150px;
+        margin-right:400px;
+    }
+    .slide6{
+        margin-left:150px;
+        margin-right:400px;
+    }
+    .slide6{
+        margin-left:150px;
+        margin-right:450px;
+    }
+    .slide7{
+        margin-left:110px;
+        margin-right:450px;
+    }
+    .slide8{
+        margin-left:100px;
+        margin-right:450px;
+    }
+    .slide9{
+        margin-left:80px;
+        margin-right:450px;
+    }
+    .slide10{
+        margin-left:130px;
+        margin-right:450px;
+    }
+    
+        .footer {
+            background-color:  #9c7b5f;
+            color: #fff;
+            text-align: center;
+            padding: 1px;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .content {
+            width: 100%;
+            height: 100px;
+        }
+        .open-modal {
+        padding: 3px 20px;
+        color: black;
+        text-align: center;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        margin-left: auto;
+        }
+        .open-modal:hover {
+            background-color:rgb(62, 60, 60);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            backdrop-filter: blur(5px);
+        }
+        .modal-toggle {
+            display: none;
+        }
+        .modal-toggle:checked+.modal {
+            display: block;
+        }
+        .modal-content {
+            background-color: rgb(219, 147, 22);
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid white;
+            width: 250px;
+            height: 250px;
+            border-radius: 5px;
+            position: relative;
+        }
+        .close {
+            color: rgb(46, 4, 54);
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: black;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+        .label {
+            margin: 10px 0 5px;
+        }
+         input[type="text"],input[type="password"] {
+            padding: 10px;
+            width: 95%;
+            margin-bottom: 5px;
+            border: 1px solid black;
+            border-radius: 5px;
+         }
+         button[type="submit"] {
+            background-color:white;
+            border: none;
+            padding: 10px;
+            color: black;
+            border-radius: 5px;
+            cursor: pointer;
+         }
+         button[type="submit"]:hover {
+            background-color:black;
+            color: white ;
+         }
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color:black;
+    padding: 14px 16px;
+    font-family: comic sans ms; 
+    margin: 0; 
+    background-color: blue;
+  }
+.dropdown:hover .dropbtn {
+    color: black;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    float: none;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .dropdown-content a:hover {
+    background-color: #fd7e7e;
+    color: black;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+       
+        <div class="header">
+            <img src="Toyota-logo.png" style="height: 50px; width: 50px;">
+          
+        </div>
+        <div class="nav">
+            <a href="">Home</a>
+            <a href="">Shop Now</a>
+            <a href="tian1.html">Products</a>
+            <a href="discover.html">About</a>
+            <div class="dropdown">
+                <button class="dropbtn">Category
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="category.html">For girl</a>
+                  <a href="category.html">For boys</a>
+                </div>
+            </div>
+            <label for="modal-toggle"class="open-modal" style="margin-top: 10px;">Login</label>
+        <input type="checkbox" id="modal-toggle" class="modal-toggle">
+        <div class="modal">
+            <div class="modal-content">
+                <label for="modal-toggle" class="close">&times;</label>
+                <h2><center>Login</center></h2>
+                <form>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Forgot</button>
+                    <button type="submit" onclick="window.location.href='register.html'" style="float:right">Register</button>
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+       
+           
+        <div class="content">
+
+            <div id="outerbox">
+
+
+                <div id="sliderbox">
+
+                   <div class="slide1">
+                   <a href="#"><img id="image1" src="th (1) - Copy.jpg"></a>
+               </div>
+               <div class="slide2">
+                   <a href="#"><img id="image2" src="th (8).jpg"></a>
+               </div>
+               <div class="slide3">
+                   <a href="#"><img id="image3"src="th (4).jpg" ></a>
+               </div>
+               <div class="slide4">
+                   <a href="#"><img id="image4"src="th (6).jpg" ></a>
+               </div>
+               <div class="slide5">
+                   <a href="#"><img id="image5"src="th (7).jpg" ></a>
+               </div>
+               <div class="slide6">
+                   <a href="#"><img id="image6"src="th (8).jpg" ></a>
+               </div>
+               <div class="slide7">
+                   <a href="#"><img id="image7"src="th (1).jpg" ></a>
+               </div>
+               <div class="slide8">
+                   <a href="#"><img id ="image8"src="th (7).jpg" ></a>
+               </div>
+               <div class="slide9">
+                   <a href="#"><img id="image9" src="th (6).jpg" ></a>
+               </div>
+               <div class="slide10">
+                   <a href="#"><img id="image10"src="th (8).jpg" ></a>
+               </div>
+
+                   
+
+
+                </div>
+
+
+           </div>
+
+<div class="moreContent">
+
+</div>
+        <div class="footer">
+            <p>. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+
+</html>

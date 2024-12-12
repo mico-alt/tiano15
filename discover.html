@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    scroll-behavior: smooth;
+}
+header{
+    background: rgb(219, 218, 211);
+    color: black;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+}
+header.heroh1span{
+    color: #ffd700;
+}
+header.btn{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ffd700;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+header.btn:hover{
+    background: #333;
+    color: #ffd700;
+    transform: scale(1.1);
+}
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    background:black;
+}
+nav ul li{
+    margin: 0 15px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+nav ul li a:hover{
+    color: #ffd700;
+}
+.section{
+    padding: 50px 20px;
+    text-align: center;
+    background:rgb(245, 222, 141);
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideIn 1s ease-in-out forwards;
+}
+.favorites{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.favorites-card{
+    background: rgb(237, 206, 128);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+}
+.favorites-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0,0,0.2);
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideIn{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+footer{
+    background: black;
+    color: white;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+}
+@media(max-width:768px){
+    .favorites{
+        flex-direction: column;
+        align-items: center;
+    }
+    .favorites-card{
+    width: 90%;
+    }
+}
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <a href="discover.html">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    <div class="hero">
+        <h1 class="fade-in">Hello, I'm <span>TIANONG</span></h1>
+        <button onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth'})">Discover More</button>
+    </div>
+</header>
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#myfavorite">Favorites</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+<section id="about" class="section slide-in">
+    <h2>About Me</h2>
+    <p>My name is Christian U. Barnacha. A students of Isabela State University-Jones Campus.</p>
+</section>
+<section id="myfavorite" class="section slide-in">
+<h2><center> MY FAVORITES</center></h2>
+<div class="favorites">
+    <div class="favorites-card hover-grow">
+        <h3>MOVIE</h3>
+        <p>ANIME</p>
+        <p>LOVE STORY</p>
+        <p>AVENGERS</p>
+    </div>
+    <div class="favorites-card hover-grow">
+        <h3>FOOD</h3>
+        <p>SISIG</p>
+        <p>CHOCOLATE</p>
+        <p>SHANGHAI</p>
+    </div>
+    <div class="favorites-card hover-grow">
+        <h3>ONLINE GAMES</h3>
+        <p>MOBILE LEGENDS</p>
+        <p>PUBG</p>
+        <p>CALL OF DUTY</p>
+    </div>
+</div>
+</section>
+<section id="contact" class="section slide-in">
+    <h2>Contact Me</h2>
+    <p>Email: christianbarnacha441@gmail.com</p>
+    <p>Phone: 09262861062</p>
+</section>
+<footer>
+    <p>©2024 Name. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
